@@ -21,7 +21,7 @@ function ProductList({ cart, addItemToCart }) {
         navigate("/login");
       }
       const { data } = await axios.post(
-        "https://meal-co-server.vercel.app/",
+        "https://meal-co-server.vercel.app",
         {},
         { withCredentials: true }
       );

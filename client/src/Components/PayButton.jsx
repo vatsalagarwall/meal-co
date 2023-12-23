@@ -7,7 +7,7 @@ function PayButton({ cartItems, userId }) {
     console.log("userId:", userId);
     axios
       .post(
-        "https://meal-co-server.vercel.app//stripe/create-checkout-session",
+        "https://meal-co-server.vercel.app/stripe/create-checkout-session",
         {
           cartItems,
           userId,

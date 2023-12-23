@@ -27,6 +27,7 @@ const Login = ({ setUserId }) => {
       position: "bottom-left",
     });
 
+  axios.defaults.withCredentials = true;
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {

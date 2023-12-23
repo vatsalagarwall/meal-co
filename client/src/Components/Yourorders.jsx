@@ -10,7 +10,7 @@ const Yourorders = ({ userId }) => {
     const fetchOrders = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5050/orders/users/${userId}`
+          `https://meal-co-server.vercel.app//orders/users/${userId}`
         );
 
         http: console.log(response.data.orders);

@@ -31,7 +31,7 @@ const Login = ({ setUserId }) => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:5050/login",
+        "https://meal-co-server.vercel.app//login",
         {
           ...inputValue,
         },

@@ -29,12 +29,18 @@ app.listen(5050, () => {
 
 app.use(
     cors({
-        origin: ["https://meal-co-client.vercel.app/"],
+        origin: ["https://meal-co-client.vercel.app"],
         methods: ["GET", "POST", "PUT", "DELETE"],
         credentials: true,
     })
 );
 
+app.options("/", (req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "https://meal-co-6k56.vercel.app");
+    res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    res.sendStatus(204);
+});
 
 app.use(cookieParser());
 
